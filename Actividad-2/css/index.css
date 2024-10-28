@@ -15,94 +15,93 @@ body {
 /* Encabezado */
 body {
     margin: 0;
-    font-family: Arial, sans-serif; /* Cambia la fuente si lo deseas */
+    font-family: Arial, sans-serif; 
 }
 
 .header {
-    display: flex; /* Utiliza flexbox para alinear los elementos */
-    justify-content: space-between; /* Espacia los elementos */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 20px; /* Espacio interno alrededor del contenido */
-    background-color: #f8f9fa; /* Color de fondo del header */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px; 
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .logo img {
-    height: 50px; /* Ajusta el tamaño del logo */
+    height: 50px; 
 }
 
 h1 {
-    font-size: 24px; /* Tamaño de fuente del título */
-    color: #333; /* Color del texto */
-    margin: 0; /* Elimina el margen del título */
+    font-size: 24px; 
+    color: #333; 
+    margin: 0; 
 }
 
 button {
-    background-color: #0d0d0d; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    background-color: #0d0d0d; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 }
 
 button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+    background-color: #0056b3; /
 }
 
 .whatsapp-icon {
-    color: #25D366; /* Color del icono de WhatsApp */
-    font-size: 30px; /* Tamaño del icono */
-    text-decoration: none; /* Sin subrayado */
+    color: #25D366; 
+    font-size: 30px; 
+    text-decoration: none; 
 }
 
 .whatsapp-icon:hover {
-    color: #128C7E; /* Color al pasar el ratón */
+    color: #128C7E; 
 }
 
 
 .navegacion {
-    display: flex; /* Utiliza flexbox para alinear los elementos en una fila */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 15px 20px; /* Espacio interno del nav */
-    background-color: #0e0f0f; /* Color de fondo de la barra de navegación */
-    color: white; /* Color del texto de la navegación */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 15px 20px; 
+    background-color: #0e0f0f; 
+    color: white; 
 }
 
 .navegacion a {
-    color: white; /* Color de los enlaces */
-    text-decoration: none; /* Sin subrayado */
-    margin: 0 15px; /* Espaciado entre enlaces */
-    font-size: 18px; /* Tamaño de fuente de los enlaces */
-    transition: color 0.3s; /* Transición suave para el cambio de color */
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s; 
 }
 
 .navegacion a:hover {
-    color: #e0e0e0; /* Color al pasar el ratón por encima de los enlaces */
+    color: #e0e0e0; 
 }
 
 input[type="text"] {
-    padding: 10px; /* Espaciado interno del campo de texto */
-    border: 1px solid #ccc; /* Borde del campo de texto */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 200px; /* Ancho del campo de texto */
-    margin-right: 10px; /* Espacio entre el campo de texto y el botón */
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 200px; 
+    margin-right: 10px; 
 }
 
 button[type="submit"] {
-    background-color: #28a745; /* Color de fondo del botón de búsqueda */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    background-color: #28a745; 
+    color: white; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 }
 
 button[type="submit"]:hover {
-    background-color: #218838; /* Color de fondo al pasar el ratón */
+    background-color: #218838; 
 }
 
 
