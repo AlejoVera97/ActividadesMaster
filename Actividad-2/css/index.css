@@ -1,39 +1,40 @@
 /* Estilo general */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #3f3d3d00;
+    margin: 10px;
+    padding: 10px;
+    background-color: #08080800;
 }
 
 /* Contenedor principal */
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
 /* Encabezado */
 body {
-    margin: 0;
+    margin:10px;
     font-family: Arial, sans-serif; 
 }
 
 .header {
     display: flex; 
-    justify-content: space-between; 
+    justify-content: space-evenly; 
     align-items: center; 
     padding: 20px; 
-    background-color: #f8f9fa; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: #68666676; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.424); 
 }
 
 .logo img {
-    height: 50px; 
+    height: 70px; 
+    border-radius: 50%;
 }
 
 h1 {
-    font-size: 24px; 
-    color: #333; 
+    font-size: 40px; 
+    color: #010101; 
     margin: 0; 
 }
 
@@ -48,17 +49,17 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /
+    background-color: #9b9c9c; /
 }
 
 .whatsapp-icon {
-    color: #25D366; 
-    font-size: 30px; 
+    color: #13d259; 
+    font-size: 50px; 
     text-decoration: none; 
 }
 
 .whatsapp-icon:hover {
-    color: #128C7E; 
+    color: #0b0b0b; 
 }
 
 
@@ -66,8 +67,8 @@ button:hover {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    padding: 15px 20px; 
-    background-color: #0e0f0f; 
+    padding: 5px 20px; 
+    background-color: #0707078b; 
     color: white; 
 }
 
@@ -92,7 +93,7 @@ input[type="text"] {
 }
 
 button[type="submit"] {
-    background-color: #28a745; 
+    background-color: #040404; 
     color: white; 
     border-radius: 5px; 
     padding: 10px 15px; 
@@ -101,7 +102,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #218838; 
+    background-color: #262525; 
 }
 
 
@@ -115,8 +116,9 @@ button[type="submit"]:hover {
 
 
 .recetas {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
+    background-color: #53515195;
+    border: 1px solid #0f0f0f4c;
+    color: rgb(2, 2, 2);
     border-radius: 5px;
     padding: 20px;
     width: 300px;
@@ -138,28 +140,79 @@ h3 {
     margin-top: 0;
 }
 
-/* Pie de página */
+/* Estilos generales del footer */
 .footer {
-    background-color: #0a0a0a;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #333;
+    color: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 0.9em;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contact-info,
-.quick-links,
+/* Contacto */
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p {
+    margin: 0 10px;
+}
+
+.contact-info a {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Redes sociales */
 .social-media {
-    flex: 1;
-    margin: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
+.social-media ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media a {
+    color: #ff8c00;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.social-media a:hover {
+    color: #ffd700;
+}
+
+.social-media p {
+    margin: 0 10px;
+    color: #aaa;
+}
+
+/* Iconos */
+.social-media i {
+    margin-right: 5px;
+    color: #ff8c00;
 }
