@@ -1,0 +1,156 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: rgba(144, 143, 143, 0.263); 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Encabezado */
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px; 
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.logo img {
+    height: 50px; 
+}
+
+h1 {
+    font-size: 24px; 
+    color: #333; 
+    margin: 0; 
+}
+
+button {
+    background-color: #0d0d0d; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+/* Navegación */
+.navegacion {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+.navegacion a {
+    margin: 0 15px; 
+    text-decoration: none; 
+    color: #090909; 
+}
+
+.navegacion a:hover {
+    text-decoration: underline; 
+}
+
+/* Sección de perfil */
+.perfil {
+    margin-bottom: 20px; 
+}
+
+.user-info {
+    display: flex; 
+    align-items: center; 
+}
+
+.perfil-img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin-right: 20px; 
+}
+
+/* Secciones de recetas */
+.recetas {
+    margin-bottom: 20px; 
+}
+
+.receta {
+    background-color: #f8f9fa; 
+    border: 1px solid #dee2e6; 
+    border-radius: 5px; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+}
+
+.receta h3 {
+    margin: 0; 
+}
+
+.receta a {
+    display: block;
+    margin-top: 10px; 
+    color: #007bff; 
+    text-decoration: none; 
+}
+
+.receta a:hover {
+    text-decoration: underline; 
+}
+
+/* Pie de página */
+.footer {
+    background-color: #0a0a0a;
+    color: white;
+    padding: 20px;
+    text-align: center; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+.contact-info,
+.quick-links,
+.social-media {
+    flex: 1; 
+    margin: 10px; 
+}
+
+/* Estilos para enlaces dentro del pie de página */
+.footer a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer a:hover {
+    text-decoration: underline; 
+}
+
+/* Si hay listas dentro del pie de página */
+.footer ul {
+    list-style: none; 
+   
+}
+
+.footer-bottom {
+    margin-top: 20px; 
+    font-size: 14px; 
+    color: #ccc; 
+}
