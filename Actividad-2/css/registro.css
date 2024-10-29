@@ -124,45 +124,79 @@ button:hover {
     text-decoration: underline; 
 }
 
-/* Pie de página */
+/*  footer */
 .footer {
-    background-color: #0a0a0a;
-    color: white;
-    padding: 20px;
-    text-align: center; 
+    background-color: #333;
+    color: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 0.9em;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap; 
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contact-info,
-.quick-links,
+/* Contacto */
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p {
+    margin: 0 10px;
+}
+
+.contact-info a {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Redes sociales */
 .social-media {
-    flex: 1; 
-    margin: 10px; 
+    display: flex;
+    align-items: center;
 }
 
-/* Estilos para enlaces dentro del pie de página */
-.footer a {
-    color: white; 
-    text-decoration: none; 
+.social-media ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.footer a:hover {
-    text-decoration: underline; 
+.social-media li {
+    margin: 0 10px;
 }
 
-/* Si hay listas dentro del pie de página */
-.footer ul {
-    list-style: none; 
-   
+.social-media a {
+    color: #ff8c00;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
-.footer-bottom {
-    margin-top: 20px; 
-    font-size: 14px; 
-    color: #ccc; 
+.social-media a:hover {
+    color: #ffd700;
+}
+
+.social-media p {
+    margin: 0 10px;
+    color: #aaa;
+}
+
+/* Iconos */
+.social-media i {
+    margin-right: 5px;
+    color: #ff8c00;
 }
