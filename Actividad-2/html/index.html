@@ -5,49 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChefConnect</title>
+    <meta name="description" content="Muro de recetas cotidianas">
+    <meta name="keywords" content="Recetas,ComidaUruguaya,Compartir">
+    <meta name="author" content="Alejo Vera">
     <link rel="stylesheet" href="/Actividad-2/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<div class="container">
-
-    <div class="header">
+<body>
+    <header class="header">
         <div class="logo">
             <a href="index.html">
                 <img src="../imagenes/Logo.jpg" alt="Logo">
             </a>
         </div>
-        <h1>ChefConnect</h1>
+        <h1> <strong> ChefConnect</strong></h1>
         <button onclick="location.href='registro.html'">Crear cuenta</button>
         <button onclick="location.href='logeo.html'">Login</button>
         <button onclick="location.href='perfil.html'">Usuarios</button>
         <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-icon">
             <i class="fab fa-whatsapp"></i>
         </a>
-    </div>
-
-    <nav class="navegacion"> 
-    <input type="text" name="search" placeholder="Buscar recetas..." required>
-    <button type="submit">Buscar</button>
-</nav>
-    <body>
-        <div class="contenido">
-            <div class="recetas">
-                <img class="imgrecetas" src="/Actividad-2/imagenes/Asado.png" alt="RecetaAsado">
+    </header>
+    <nav class="navegacion">
+            <input type="text" name="search" placeholder="Buscar recetas..." required>
+            <button type="submit">Buscar</button>
+    </nav>
+        <main class="contenido">
+            <article class="recetas">
+                <figure>
+                    <img class="imgrecetas" src="/Actividad-2/imagenes/Asado.png" alt="RecetaAsado">
+                </figure>
                 <h3> Asado Uruguayo </h3>
-                <p>El asado uruguayo es una comida típica de fin de semana, también es muy común servirla como plato
+                <section>El asado uruguayo es una comida típica de fin de semana, también es muy común servirla como plato
                     principal
                     de fiestas familiares o celebraciones con amistades. Se trata de un trozo de carne asado a la leña
                     sobre una
-                    parrilla, acompañado de la tradicional salsa chimichurri. </p>
+                    parrilla, acompañado de la tradicional salsa chimichurri. 
+                </section>
                 <h5> Ingredientes:</h5>
-
-                <ol>
+                <section>
                     <li>½ kilogramo de Carne para asar por persona</li>
                     <li>1 Manojo de perejil</li>
                     <li>6 Dientes de ajo</li>
                     <li>Aceite</li>
                     <li>1 pizca de Sal</li>
                 </ol>
+                 </section>
 
                 <h5> Preparación:</h5>
 
@@ -70,13 +73,13 @@
                     <li>Finalmente, sirve el asado de carne acompañado con el chimichurri preparado.</li>
                     <li>¡Una deliciosa opción para disfrutar en compañía!</li>
                 </ol>
-            </div>
-
-
-            <div class="recetas">
-                <img class="imgrecetas" src="/Actividad-2/imagenes/Chivito.png" alt="RecetaChivito">
+            </article>
+            <article class="recetas">
+                <figure>
+                    <img class="imgrecetas" src="/Actividad-2/imagenes/Chivito.png" alt="RecetaChivito">
+                </figure>
                 <h3> Chivito </h3>
-                <p>El chivito es uno de los platos más típicos de Uruguay, se come de muchas formas, especialmente en
+                <section>El chivito es uno de los platos más típicos de Uruguay, se come de muchas formas, especialmente en
                     tres
                     modalidades: chivito al pan, chivito canadiense y como plato principal nombre es chivito al plato.
                     Es uno de
@@ -84,7 +87,8 @@
                     huevo,
                     jamón, queso mozzarella, papas fritas y ensalada rusa. Aprende a prepararlo aquí, de seguro te
                     encantará
-                    porque es un plato muy completo tanto en sabor como en su contenido nutricional.</p>
+                    porque es un plato muy completo tanto en sabor como en su contenido nutricional.
+                </section>
                 <h5>Ingredientes:</h5>
                 <ol>
                     <li>1 Bife de carne de vaca</li>
@@ -117,11 +121,12 @@
                         y la ensalada rusa.</li>
                     <li>¡A disfrutar!</li>
                 </ol>
-            </div>
-
-            <div class="recetas">
-                <img class="imgrecetas" src="/Actividad-2/imagenes/Empandas.png" alt="RecetaEmpanadas">
-                <h3> Empandas </h3>
+            </article>
+            <article class="recetas">
+                <figure>
+                    <img class="imgrecetas" src="/Actividad-2/imagenes/Empandas.png" alt="RecetaEmpanadas">
+                </figure>
+                    <h3> Empandas </h3>
                 <p>
                     Una receta fácil. Las empanadillas son típicas de la gastronomía española. Las vamos a hacer al
                     horno,
@@ -175,13 +180,13 @@
                     <li>Prepara estas empanadillas rellenas de atún al horno en casa. Sin duda las disfrutarás como
                         aperitivo.</li>
                 </ol>
-            </div>
-
-
-            <div class="recetas">
+            </article>
+            <article class="recetas">
                 <h3> Tortilla </h3>
-                <img class="imgrecetas" src="/Actividad-2/imagenes/JamonQueso.png " alt="RecetaJamonQueso">
-                <p>La tortilla de patatas rellena de queso y jamon, es un pasito más, de la típica tortilla de patatas
+                <figure>
+                    <img class="imgrecetas" src="/Actividad-2/imagenes/JamonQueso.png " alt="RecetaJamonQueso">
+                </figure>
+                    <p>La tortilla de patatas rellena de queso y jamon, es un pasito más, de la típica tortilla de patatas
                     española.
                     En este caso lleva un relleno de jamón york y queso, tipo de sandwich. Aunque el relleno puede ser
                     el que
@@ -223,10 +228,8 @@
                     </li>
                     <li>Finalmente, la sacamos de la sartén con la ayuda del plato. ¡Ya está lista!</li>
                 </ol>
-            </div>
-
-
-            <div class="recetas">
+            </article>
+            <article class="recetas">
                 <h3> Pollo con verduras </h3>
                 <img class="imgrecetas" src="/Actividad-2/imagenes/Pollo.png" alt="RecetaPollo">
                 <p>
@@ -276,9 +279,8 @@
                     <li>Servir con una generosa guarnición de verduras y espolvorear con perejil picado.</li>
                 </ol>
 
-            </div>
-
-            <div class="recetas">
+            </article>
+            <article class="recetas">
                 <h3> Pizzas caseras </h3>
                 <img class="imgrecetas" src="/Actividad-2/imagenes/Pizzas.jpg" alt="RecetaPollo">
                 <p>Esta receta de masa de pizza fácil va con levadura, pero podéis encontrar perfectamente algunas
@@ -305,20 +307,17 @@
                         partimos en dos y podemos hacer dos pizzas muy majas. La amasamos y estiramos. Ponemos los
                         ingredientes y al horno. ¡Listo!</li>
                 </ol>
-            </div>
-        </div>
+            </article>
+        </main>
 
         <!-- Footer -->
-        <div class="footer">
-            <div class="footer-content">
+    <footer class="footer">
+        <div class="footer-content">
                 <div class="contact-info">
                     <h3>Contacto</h3>
                     <p>Email: <a href="mailto:contacto@recetas.com">contacto@recetas.com</a></p>
                     <p>Teléfono: +123 456 7890</p>
                 </div>
-
-                
-
                 <div class="social-media">
                     <h3>Síguenos</h3>
                     <ul>
@@ -333,9 +332,9 @@
                     </ul>
                     <p> @2024 Página de Recetas. Todos los derechos reservados.</p>
                 </div>
-            </div>      
         </div>
-</div>
+    </footer>
+
 </body>
 
 </html>
