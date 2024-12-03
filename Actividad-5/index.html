@@ -48,7 +48,6 @@
     <p>Perdidas: <span id="perdidas">0</span></p>
     <p>Empatadas: <span id="empatadas">0</span></p>
 
-    Gráfica:
 
 
 
@@ -62,10 +61,6 @@
     <div class="txtStats">
     </div>
 
-
-
-
-
     <!-- JavaScript -->
 
     <script>
@@ -76,9 +71,17 @@
         const txtResultado = document.querySelector(".txtResultado");
         const txtStats = document.querySelector(".txtStats");
 
+        const BtnPiedra = document.querySelector("#BtnPiedra");
+        const BtnTijera = document.querySelector("#BtnTijera");
+        const BtnPapel = document.querySelector("#BtnPapel");
 
+        BtnPiedra.addEventListener("click", () => {jugar("piedra")});
+        BtnPapel.addEventListener("click", () => {jugar("papel")});
+        BtnTijera.addEventListener("click", () => {jugar("tijera")});
 
-        const objScore = {
+        const opciones =[ 'papel', 'piedra','tijera'];
+
+        const objGameScore = {
             ganadas: 0,
             perdidas: 0,
             empatadas: 0,
@@ -89,17 +92,18 @@
                 user_piedra: 0,
                 user_papel: 0,
                 user_tijera: 0
-            }
+            },
+            
         }
 
         console.log("text body: ", document.body.innerText);
 
 
-        
+
         // Funciones 
 
         //Jugar
-        function jugar(usuario) {
+        const jugar =usuario => {
             const jugadorAI = elegirJugadorAI(); // devuelve piedra, papel o tijera
 
             let resultado = "";
@@ -118,26 +122,15 @@
                     resultado = 'Ganaste';
                 }
 
-            } else if (usuario == 'papel') {
+                // agrege resulado:
+                resultado=(jugadorAI == 'Papel')? "perdiste":"Ganaste";
+                console.log(resultado);}
 
-                if (jugadorAI == 'tijera') {
-                    console.log('Perdiste');
-                    resultado = 'Perdiste';
-                } else {
-                    console.log('Ganaste');
-                    resultado = 'Ganaste';
-                }
+             else if (usuario == 'papel') { resultado=(jugadorAI == 'Tijera')? "perdiste":"Ganaste";}
+             else if (usuario == 'tijera') { resultado=(jugadorAI == 'Piedra')? "perdiste":"Ganaste";}
 
-            } else if (usuario == 'tijera') {
-
-                if (jugadorAI == 'piedra') {
-                    console.log('Perdiste');
-                    resultado = 'Perdiste';
-                } else {
-                    console.log('Ganaste');
-                    resultado = 'Ganaste';
-                }
-            }
+               
+            
 
 
             // Stats de los Jugadores
@@ -172,6 +165,8 @@
         }
 
         // Elegir Jugador AI
+        // Elije una opcion al azar
+        // @ return {string}- ej: piedra, papel o tiejera.
         function elegirJugadorAI() {
             const opciones = ['piedra', 'papel', 'tijera'];
             const numero = Math.floor(Math.random() * opciones.length);
@@ -179,9 +174,11 @@
         }
 
         // Vs
+        //OBTENER UN NUMERO AL AZAR ENTRE 0 Y 2.
+        // REALIZA UNA PARTA CADA DECIMA DE SEGUNDO
         function AIvsAI() {
             const opciones = ['piedra', 'papel', 'tijera'];
-
+            // EJECUTA UNA FUNCION X CADA TIEMPO
             setInterval(function () {
                 const numero = Math.floor(Math.random() * opciones.length);
                 const usuario = opciones[numero];
@@ -192,8 +189,9 @@
             // jugar(usuario);
         }
 
-        // Grafica
-        function graficar() {
+        // Grafica entre ganadas y perdida
+        // usando dos div rojos y azul
+         const graficar = ()=>{
             const total = objScore.ganadas + objScore.perdidas;// +objScore.empatadas;
             const porcentajeGanadas = (objScore.ganadas / total) * 100;
             const porcentajePerdidas = (objScore.perdidas / total) * 100;
