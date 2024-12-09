@@ -18,18 +18,25 @@
 <body>
 
     <div id="ListaCanciones" class=" Lista"></div>
+    <h3> Cancion reproduciendo< <div id="playingSong">
+            </div>
 
-  
 
-    <button id="btnTema3"> Play song 3</button>
-    <button id="btnAnt"> Anterior </button>
-    <button id="btnPlay"> Play </button>
-    <button id="btnPausa"> Pausa </button>
-    <button id="btnSig"> Siguiente </button>
+            <button id="btnTema3"> Play song 3</button>
 
-    <h3> Cancion reproduciendo</h3>
-    <div id="playingSong"> </div>
+            <button id="btnAnt"> Anterior </button>
+            <button id="btnPlay"> Play </button>
+            <button id="btnPausa"> Pausa </button>
+            <button id="btnSig"> Siguiente </button>
 
+            <!-- Etiqueta de que deja reproducir audios-->
+            <audio autoplay controls> 
+                <source src="" >
+            </audio>
+            Barra de progreso de la cancion.
+            <div class="audio-bar">
+                <div class="audio-bar-line"></div>
+            </div>
 </body>
 
 </html>

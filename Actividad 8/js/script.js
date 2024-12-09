@@ -1,81 +1,135 @@
+// json
+const lista_Canciones = [
+    {
+        artista: "Artista1",
+        url: "",
+        img: "",
+        titulo: "Tema1"
+    },
+    {
+        artista: "Artista2",
+        url: "",
+        img: "",
+        titulo: "Tema2"
+    },
+    {
+        artista: "Artista3",
+        url: "",
+        img: "",
+        titulo: "Tema3"
+    },
+    {
+        artista: "Artista4",
+        url: "",
+        img: "",
+        titulo: "Tema4"
+    },
+    {
+        artista: "Artista5",
+        url: "",
+        img: "",
+        titulo: "Tema5"
+    },
+];
 
-
+//-------------------------------------------------------------------------
 // Variables
-const lista_Canciones = ["Tema1", "Tema2", "Tema3", "Tema4", "Tema5"];
-const lista_Artistas = ["Artista1", "Artistia2", "Artista3", "Artista4", "Artista5"];
 const divListaCanciones = document.getElementById("ListaCanciones");
 const btnTema3 = document.querySelector("#btnTema3");
 const divsCanciones = document.querySelectorAll(".Lista-cancion");
-const divPlayingSong = document.getElementById("playingSong")
+const divPlayingSong = document.getElementById("playingSong");
+
+// botones
+const btnSig = document.querySelector("#btnSig");
+const btnAnt = document.querySelector("#btnAnt");
+const btnPlay = document.querySelector("#btnPlay");
+const btnPausa = document.querySelector("#btnPausa");
+
+//audio
+const audioPlayer = document.querySelector("audio");
+const lista_mp3 = [];
+let idCancionActual = 0;
 
 
-
-const btnSig=document.querySelector("#btnSig");
-const btnAnt=document.querySelector("#btnAnt");
-
-
-
-lista_Canciones.forEach((cancion, idx) => {
-    console.log(`${cancion} - id: ${idx}`);
-
-    const song = lista_Canciones[idx];
-    const artist = lista_Artistas[idx];
-
-    divListaCanciones.innerHTML += `<div id="song_${idx}" class="Lista-cancion">
-                                 ${song} <br> 
-                                 ${artist}
-                                </div>`;
-});
-
+//------------------------------------------------------------------------
+//FUNCIONES
+//lista de canciones
 
 
 btnTema3.addEventListener("click", () => {
-    console.log("Cancion", lista_Canciones[2]);
-    console.log(`Artista:, ${lista_Artistas[2]}`);
-
+    idCancionActual = 2;
     imprimirReproduciendo(2);
-
-
 });
 
-
-document.addEventListener("cklick", (event) => {
+document.addEventListener("click", (event) => {
     console.log(event.target.id);
 });
 
 
 
-
-divsCanciones.forEach((divCancion, i) => {
-    divCancion.addEventListener("click", () => {
-        imprimirReproduciendo(i);
-    });
-});
-
-
-
+// reproducir
 function imprimirReproduciendo() {
-    const song = lista_Canciones[idCancionActual];
-    const artist = lista_Artistas[idCancionActual];
+    const song = lista_Canciones[idCancionActual].titulo;
+    const artist = lista_Artistas[idCancionActual].artista;
+    const url = lista_Canciones[idCancionActual].url;
     console.log("Artista: " + artist + " canción: " + song);
-
     divPlayingSong.innerHTML = `<div>
+    idcancionActual: ${idCancionActual} <br/>
         cancion: ${song} <br/>
         artista ${artist}
         </div>`;
+    audioPlayer.src = url;
 };
 
-
-
-let idCancionActual=0;
-btnSig.addEventListener("click", () =>{
-    idCancionActual++;
-    //revisar que no me pase de la ultima cancion ( comience por la primera)
+// boton siguiente
+btnSig.addEventListener("click", () => {
+    if (idCancionActual == lista_Canciones.length - 1) {
+        idCancionActual = 0;
+    } else {
+        idCancionActual++;
+    }
     imprimirReproduciendo();
-})
+});
 
-
-btnSig.addEventListener("click", () =>{
-    idCancionActual--;
+// boton anterior
+btnAnt.addEventListener("click", () => {
+    if (idCancionActual == 0) {
+        idCancionActual = lista_Canciones.length - 1;
+    } else {
+        idCancionActual--;
+    }
     imprimirReproduciendo();
-})
+});
+
+//boton reproducir
+const handleReproducir = () => {
+    audioPlayer.play();
+}
+btnPlay.addEventListener("click", handleReproducir);
+
+//boton pausar
+const handelePausar = () => {
+    audioPlayer.pause();
+}
+btnPausa.addEventListener("click", handelePausar);
+
+
+
+//-- mi codigo
+lista_Canciones.forEach((cancion, idx) => {
+    console.log(`${cancion} - id: ${idx}`);
+    const song = cancion.titulo;
+    const artist = cancion.artista;
+    contenidoHTML += `<div id="song_${idx}" class="Lista-cancion">
+                        ${song} <br>
+                        ${artist}
+                        </div>`;
+});
+
+
+divsCanciones.forEach((divCancion, i) => {
+    divCancion.addEventListener("click", (event) => {
+        idCancionActual = i;
+        imprimirReproduciendo();
+    });
+});
