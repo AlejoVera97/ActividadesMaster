@@ -1,0 +1,42 @@
+.acordeon {
+    width: 90%;
+    max-width: 120em;
+    padding: 2em;
+    box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1),
+        -0.15em -0.15em 0.3em rgba(255, 255, 255, 0.6);
+    border-radius: 0.5em;
+}
+
+.acordeon .bloque {
+
+    margin: 0 0 1em;
+    padding: 1em;
+    box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1),
+        -0.15em -0.15em 0.3em rgba(255, 255, 255, 0.6);
+    border-radius: 0.5em;
+}
+
+.acordeon .h2 {
+    margin: 0 0 1em;
+    padding: 1em;
+    box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1),
+        -0.15em -0.15em 0.3em rgba(255, 255, 255, 0.6);
+    border-radius: 0.5em;
+
+}
+
+.acordeon .contenido {
+
+    padding: 0em;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+    box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1),
+        -0.15em -0.15em 0.3em rgba(255, 255, 255, 0.6);
+    border-radius: 0.5em;
+}
+
+.acordeon .bloque.activo .contenido {
+    height: 4em;
+
+}
