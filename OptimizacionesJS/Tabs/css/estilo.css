@@ -2,6 +2,7 @@
 width: 90% ;
 max-width: 120em;
 padding: 1em;
+
 }
 
 .contenedor .ul{
@@ -15,12 +16,17 @@ list-style: none;
 }
 
 .contenedor .li{
-
 padding: 1em;
 margin: 0 1em 0 0 ;
 box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1),
 -0.15em -0.15em 0.3em rgba(255, 255, 255, 0.6);
 border-radius: 0.5em;
+transition: all .5s ease;
+}
+
+.contenedor .li.activo{
+    background-color: lightblue;
+    color: white;
 }
 
 .contenedor .subcontenedor{
@@ -35,4 +41,11 @@ position: absolute;
 box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1),
 -0.15em -0.15em 0.3em rgba(255, 255, 255, 0.6);
 border-radius: 0.5em;
+opacity: 0;
+transform:  translateY(50%);
+transition:  all .5s ease;
+}
+
+.contenedor .bloque.activo{
+opacity: 1;
 }
